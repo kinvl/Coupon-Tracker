@@ -2,9 +2,13 @@
 
 ![CouponsTrackerBanner](/Assets/CouponsTrackerBanner.png "CouponsTrackerBanner")
 
-This is iOS app for managing coupons. Made entirely in code, no storyboards were used.
+This is iOS app for managing coupons. <br>
+Made entirely in code, no storyboards were used.
 
 ***
+
+<i>You can get this app from the AppStore.</i> <br><br>
+[![AppStore](https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg "AppStore")](https://apps.apple.com/us/app/coupons-tracker-x/id1588449622 "AppStore")
 
 ### Requirements
 - iOS 13 or newer
