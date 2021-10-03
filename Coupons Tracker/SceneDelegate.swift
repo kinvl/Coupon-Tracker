@@ -7,7 +7,7 @@
 
 import UIKit
 
-var isInDarkMode: Bool!
+var isInDarkMode: Bool! = false
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -18,7 +18,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        isInDarkMode = window?.traitCollection.userInterfaceStyle == .dark
         let rootViewController = RootViewController()
         let navigationController = NavigationController(rootViewController: rootViewController)
         

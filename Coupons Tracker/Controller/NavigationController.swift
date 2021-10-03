@@ -15,6 +15,8 @@ class NavigationController: UINavigationController {
         
         setupNavigationBar()
         
+        isInDarkMode = self.traitCollection.userInterfaceStyle == .dark
+        NotificationCenter.default.post(name: .viewsNeedUpdate, object: nil)
     }
     
     private func setupNavigationBar() {
