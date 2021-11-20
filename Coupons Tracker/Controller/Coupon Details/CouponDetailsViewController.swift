@@ -125,42 +125,27 @@ class CouponDetailsViewController: UIViewController {
             values.append(value)
             
         }
+        
+        var object: Coupon?
+        
         switch do_I_Edit {
         case true:
             guard let indexPath = currentCellIndexPathForEditing else { return }
-            let object = coupons[indexPath.row]
-            
-            object.website = values[0]
-            object.discount = values[1]
-            object.expiration = values[2]
-            object.notes = values[3]
-            object.code = values[4]
-            
-            do {
-                try managedContext.save()
-                NotificationCenter.default.post(name: .shouldReloadTable, object: nil)
-            } catch  {
-                ()
-            }
-            self.dismiss(animated: true, completion: nil)
-            
+            object = coupons[indexPath.row]
         case false:
-            let object = Coupon(context: managedContext)
-            
-            object.website = values[0]
-            object.discount = values[1]
-            object.expiration = values[2]
-            object.notes = values[3]
-            object.code = values[4]
-            
-            do {
-                try managedContext.save()
-                NotificationCenter.default.post(name: .shouldReloadTable, object: nil)
-            } catch  {
-                ()
-            }
-            self.dismiss(animated: true, completion: nil)
+            object = Coupon(context: managedContext)
         }
+    
+        object?.website = values[0]
+        object?.discount = values[1]
+        object?.expiration = values[2]
+        object?.notes = values[3]
+        object?.code = values[4]
+        
+        try? managedContext.save()
+        NotificationCenter.default.post(name: .shouldReloadTable, object: nil)
+
+        self.dismiss(animated: true, completion: nil)
         
     }
     
