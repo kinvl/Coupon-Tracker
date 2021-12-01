@@ -75,6 +75,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		207E39062757C0EB0060A9E1 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				20FEE02C26F63D0900288C43 /* AppDelegate.swift */,
+				20FEE02E26F63D0900288C43 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		20E0732526FA0D37005C8D04 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,12 +150,11 @@
 		20FEE02B26F63D0900288C43 /* Coupons Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				207E39062757C0EB0060A9E1 /* Application */,
 				20E0732626FA0D3D005C8D04 /* Controller */,
 				20E0732526FA0D37005C8D04 /* View */,
 				2027458426F895930083011A /* Model */,
 				2027458326F895850083011A /* Extensions */,
-				20FEE02C26F63D0900288C43 /* AppDelegate.swift */,
-				20FEE02E26F63D0900288C43 /* SceneDelegate.swift */,
 				20FEE03826F63D0D00288C43 /* Assets.xcassets */,
 				20FEE03D26F63D0D00288C43 /* Info.plist */,
 			);
